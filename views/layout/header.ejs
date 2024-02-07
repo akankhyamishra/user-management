@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title><%= title %></title>
+
+</head>
+<body>
+    <style>
+   
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap');
+  
+  :root {
+    --main-gray: #616771;
+    --secondary-gray: #90949C;
+    --white: #E9EBEE;
+  }
+  
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    display: block;
+    /* justify-content: center; */
+    min-height: 100vh;
+    background: var(--secondary-gray);
+    background: white;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--main-gray);
+    position: relative;
+    border-bottom: 1px solid var(--secondary-gray);
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+  }
+  
+  .logo {
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  
+  .navigation {
+    display: flex;
+    width: 34%;
+    justify-content: space-between;
+  }
+  .navigation i{
+    color: #ffffff;
+  }
+  
+  .nav-item {
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+  }
+  
+  .nav-item:hover {
+    background-color: var(--white);
+    color: var(--main-gray);
+    cursor: pointer;
+  }
+  
+  .arrow {
+    transform: rotateZ(-90deg);
+    transition: transform .2s;
+  }
+  
+  .arrow.up {
+    transform: rotateZ(90deg);
+  }
+  
+  .arrow-right {
+    position: absolute;
+    right: 15px;
+    transform: rotateZ(180deg);
+  }
+  
+  .drop-down {
+    position: absolute;
+    top: 59px;
+    right: -1px;
+    width: 240px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s;
+    border: 1px solid var(--secondary-gray);
+    background-color: var(--main-gray);
+  }
+  
+  .drop-down.show {
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    height: 256px;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .list-item {
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    font-weight: 900;
+    color: var(--white);
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid var(--secondary-gray);
+  }
+  
+  .list-item:last-of-type {
+    border-bottom: none;
+    color: #aa0000;
+  }
+  
+  .list-item:hover {
+    background-color: var(--white);
+    color: var(--main-gray);
+    cursor: pointer;
+  }
+  
+  .list-item:last-of-type:hover {
+    color: #aa0000;
+  }
+  
+  .profile {
+    align-items: center;
+  }
+  
+  .pro-img {
+    color: var(--white);
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }    </style>
+    <header class="header">
+        <div class="container">
+          <div class="logo">WELCOME</div>
+          <nav class="navigation">
+            <a class="nav-link " href="/"><i class="fa-solid fa-home nav-item"></i></a>
+            <a class="nav-link " href="/add"><i class="fa-solid fa-user-plus nav-item"></i></a>
+            <a class="nav-link " href="/"><i class="fa-solid fa-globe nav-item"></i></a>
+           <div class="nav-envelope arrow">&#9001</div>
+          </nav>
+        </div>
+        <div class="drop-down">
+          <ul class="list">
+            <li class="profile list-item">
+              <span class="pro-img">R</span>
+              <span class="name">Ruka Kane</span>
+            </li>
+            <li class="list-item">
+              <i class="fas fa-cog icon"></i>
+              <span>Settings</span>
+              <div class="arrow-right">&#9001</div>
+            </li>
+            <li class="list-item">
+              <i class="fa-solid fa-book icon"></i>
+              <span>Tutorials</span>
+              <div class="arrow-right">&#9001</div>
+              </li>
+            <li class="list-item">
+              <i class="fa-solid fa-moon icon"></i>
+              <span>Night Mode</span>
+            </li>
+            <li class="list-item">
+              <i class="fa-solid fa-right-from-bracket icon"></i>
+              <span>Log Out</span>
+              
+            </li>
+          </ul>
+        </div>
+      </header>
+      
